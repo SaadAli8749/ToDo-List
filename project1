@@ -12,3 +12,38 @@ class Task {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void main() {
+  var todoList = TodoList();
+
+  while (true) {
+    print('1. Add Task');
+    print('2. Remove Task');
+    print('3. Toggle Task Status');
+    print('4. View Tasks');
+    print('5. Exit');
+
+    stdout.write('Enter your choice: ');
+    var choice = int.parse(stdin.readLineSync()!);
+
