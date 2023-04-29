@@ -46,4 +46,28 @@ void main() {
 
     stdout.write('Enter your choice: ');
     var choice = int.parse(stdin.readLineSync()!);
+    if (choice == 1) {
+      stdout.write('Enter task name: ');
+      var name = stdin.readLineSync()!;
+      todoList.addTask(name);
+      print('Task added successfully!');
+    } else if (choice == 2) {
+      stdout.write('Enter task number to remove: ');
+      var index = int.parse(stdin.readLineSync()!) - 1;
+      todoList.removeTask(index);
+      print('Task removed successfully!');
+    } else if (choice == 3) {
+      stdout.write('Enter task number to toggle status: ');
+      var index = int.parse(stdin.readLineSync()!) - 1;
+      todoList.toggleTaskDone(index);
+      print('Task status toggled successfully!');
+    } else if (choice == 4) {
+      todoList.printTasks();
+    } else if (choice == 5) {
+      break;
+    } else {
+      print('Invalid choice. Please try again.');
+    }
+  }
+}
 
